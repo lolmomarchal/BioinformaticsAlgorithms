@@ -45,3 +45,29 @@ public static List<String> FrequentWords(String Text, int k) {
     return Patterns; 
 
 }
+import java.util.Scanner;
+
+// Please do not remove package imports because these are used by the autograder.
+
+public class Main { // Please do not change this class declaration as this line is used by the autograder.
+
+// Insert your ReverseComplement function here, along with any subroutines you need
+public static String ReverseComplement(String Pattern) {
+   StringBuilder reverse = new StringBuilder();
+   for(char i:Pattern.toCharArray()){
+         if(i == 'T'){
+            reverse.append("A");
+             }
+        else if(i == 'A'){
+             reverse.append("T");}
+        else if (i == 'G'){
+              reverse.append("C");}
+        else{
+              reverse.append("G");}
+   }
+    
+   return reverse.reverse().toString();
+
+}
+
+//Please do not provide a closing bracket for the Main class, as the autograder will handle this.
