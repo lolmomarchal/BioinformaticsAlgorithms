@@ -69,5 +69,27 @@ public static String ReverseComplement(String Pattern) {
    return reverse.reverse().toString();
 
 }
+import java.util.Scanner;
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Arrays;
 
+// Please do not remove package imports because these are used by the autograder.
+
+public class Main { // Please do not change this class declaration as this line is used by the autograder.
+
+// Insert your PatternMatching function here, along with any subroutines you need
+public static List<Integer> PatternMatching(String Pattern, String Genome) {
+    List<Integer> index = new ArrayList<>();
+    for(int i = 0; i < Genome.length()- Pattern.length() +1;i++){
+        if(Genome.substring(i, i+ Pattern.length()).equals(Pattern)){
+            index.add(i);
+            
+        }
+    }
+    return index;
+
+}
+
+//Please do not provide a closing bracket for the Main class, as the autograder will handle this.
 //Please do not provide a closing bracket for the Main class, as the autograder will handle this.
